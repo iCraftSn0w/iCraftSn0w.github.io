@@ -8,9 +8,9 @@
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
     <!-- here is a hiro preset -->
-    <a-marker preset='hiro'></a-marker>
+    <a-marker preset='AR'></a-marker>
     <!-- it is the same as the marker below -->
-    <a-marker type='pattern' url='http://examples.org/hiro.patt'></a-marker>
+    <a-marker type='pattern' url='https://raw.githubusercontent.com/iCraftSn0w/iCraftSn0w.github.io/master/ar-playground/pattern-marker.patt'></a-marker>
     
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
@@ -32,6 +32,13 @@
                scale="2">
             </a-entity>
         </a-marker>
+            
+        <a-marker preset='AR'>
+  <!-- here define the content to display on top of the marker -->
+  <a-box position='0 0.5 0' material='color: red;'></a-box>
+</a-marker>
+<!-- define a simple camera -->
+<a-entity camera></a-entity>
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
