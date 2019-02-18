@@ -5,7 +5,6 @@
     </head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
    
@@ -14,9 +13,6 @@
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-
-        <a-assets>
-            <a-asset-item id="3d-Asset" src=""></a-assets>
             
         <a-marker type='barcode' value='7'>
             <a-box position='0 0.5 0' color="black"></a-box>
@@ -24,14 +20,15 @@
 
         <a-marker type='barcode' value='6'>
             <a-entity
-                gltf-model-next="https://raw.githubusercontent.com/iCraftSn0w/iCraftSn0w.github.io/master/ar-playground/models/model.gltf">
-                scale="0.1"
+                obj-model="obj: url(https://raw.githubusercontent.com/iCraftSn0w/iCraftSn0w.github.io/master/ar-playground/models/model.obj); 
+            mtl: url(https://raw.githubusercontent.com/iCraftSn0w/iCraftSn0w.github.io/master/ar-playground/models/materials.mtl)"
+                scale="0.1">
             </a-entity>
         
             
      
-<!-- define a simple camera -->
-<a-entity camera></a-entity>
+        <!-- define a simple camera -->
+        <a-entity camera></a-entity>
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
