@@ -7,6 +7,11 @@
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
+    <!-- here is a hiro preset -->
+    <a-marker preset='hiro'></a-marker>
+    <!-- it is the same as the marker below -->
+    <a-marker type='pattern' url='http://examples.org/hiro.patt'></a-marker>
+    
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
