@@ -15,61 +15,53 @@
       		 <img id="pink" src="https://static.turbosquid.com/Preview/2018/11/02__13_09_00/hdrifin2.jpg4516E2C8-F4D2-499D-89F3-AD3E40ECB004Default.jpg" crossorigin="anonymous" />
     	</a-assets>
     	
-<a-marker  type="barcode" value="7" >
-		<a-entity  rotation="0 0 0" scale visible animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-		<!--make 3d text-->
-			<a-entity text-geometry="
-						font: #comfortaa;	
-						value: digital;
-						bevelEnabled: true; 
-						bevelSize: 0.01; 
-						bevelThickness: 0.05; 
-						curveSegments: 12;
-						
-						" 
-						position="-2.25 0 0 "
-					material="
-						color:grey; 
-						metalness:1; 
-						roughness: 0;
-						sphericalEnvMap: #pink; ">
-										
-			</a-entity>
 
-			<a-entity text-geometry="
-						font: #comfortaa;	
-						value: plus+;
-						bevelEnabled: true; 
-						bevelSize: 0.01; 
-						bevelThickness: 0.05; 
-						curveSegments: 12;" 
-						position="0.05 0 0 "
-					material="
-						color:hotpink; 
-						
-						metalness:0; 
-						roughness: 0;
-						sphericalEnvMap: #pink;">
-										
-			</a-entity>
 
+		<a-marker  type="barcode" value="7" >
+			<a-entity  position="0 1 0" rotation="0 0 0" scale visible animation="property: rotation; to: 0 360 0; loop: true; 	dur: 10000">
+			<!--make 3d text-->
+				<a-entity text-geometry="
+							font: #comfortaa;	
+							value: digital;
+							bevelEnabled: true; 
+							bevelSize: 0.01; 
+							bevelThickness: 0.05; 
+							curveSegments: 12;
+							
+							" 
+							position="-2.25 0 0 "
+						material="
+							color:grey; 
+							metalness:1; 
+							roughness: 0;
+							sphericalEnvMap: #pink; ">
+											
+				</a-entity>
+	
+				<a-entity text-geometry="
+							font: #comfortaa;	
+							value: plus+;
+							bevelEnabled: true; 
+							bevelSize: 0.01; 
+							bevelThickness: 0.05; 
+							curveSegments: 12;" 
+							position="0.05 0 0 "
+						material="
+							color:hotpink; 
+							
+							metalness:0; 
+							roughness: 0;
+							sphericalEnvMap: #pink;">
+											
+				</a-entity>
+	
+				
 			
-		<!--make cool wireframe box-->
-			<a-box 	color="white" 
-					position="0 0 0" 
-					wireframe="true" 
-					material="color: blue"
-					scale="4 1 1">
-
-			</a-box>
-
-			
-		</a-entity>
-
-		<!--Make a camera here-->
-		
-
+			</a-entity>
 		</a-marker>
+
+		<a-entity camera></a-entity>
+
 	</a-scene>
 </body>
 
